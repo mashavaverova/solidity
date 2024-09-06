@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Evenmang.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Evenmang.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.77% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>30/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.89% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>22/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.44% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>51/59</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+&nbsp;
+contract Evenmang {
+    
+struct Event {
+    
+    uint256 eventID;   // 32 bytes
+    uint256 registrationFee;  // 32 bytes
+    uint256 registrationDeadline; // 32 bytes
+    string eventName; 
+    uint8 maxPPL;  // 1 byte
+    uint8 currentPPL; // 1 byte
+    State state; // 1 byte
+    mapping (address =&gt; string) participants;
+    address[] participantAddress; 
+    }
+    enum State {NotStarted, IsOpen, Finished}
+    address public immutable creator;
+    uint256 public eventCounter;
+    mapping(uint256 =&gt; Event) public events;
+&nbsp;
+&nbsp;
+ // Custom Errors
+    error NotAuthorized(address caller);
+    error EventNotOpen(uint256 eventID, State currentState);
+    error IncorrectRegistrationFee(uint256 sent, uint256 required);
+    error EventAlreadyOpenOrFinished(uint256 eventID, State currentState);
+    error InvalidRegistrationDeadline(uint256 providedDeadline, uint256 currentTime);
+    error EventFullyBooked(uint256 eventID, uint256 maxPPL);
+    error RegistrationDeadlinePassed(uint256 currentTime, uint256 deadline);
+&nbsp;
+    event EtherReceived(address indexed sender, uint256 amount);
+    event FallbackTriggered(address indexed sender, uint256 amount, bytes data);
+    event EventSummary(uint256 eventID, string eventName, uint256 totalParticipants, uint256 totalRevenue);
+&nbsp;
+    bool private locked;
+&nbsp;
+    constructor() {
+        creator = msg.sender;
+    }
+&nbsp;
+    modifier onlyCreator() {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (msg.sender != creator) {
+         revert NotAuthorized(msg.sender);
+         }
+    _;
+    }
+&nbsp;
+// this modificator is for safety reasons and works against preventing reentrancy attacks. 
+// i use it in registration function 
+    modifier noReentrancy() {
+     <span class="missing-if-branch" title="else path not taken" >E</span>require(!locked, "ReentrancyGuard: reentrant call");
+     locked = true;
+      _;
+     locked = false;
+    }
+&nbsp;
+    function createEvent( string calldata _eventName, uint256 _registrationFee, uint8 _maxPPL) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyCreator returns (uint256) {
+        eventCounter++;
+&nbsp;
+        Event storage newEvent = events[eventCounter];
+&nbsp;
+        newEvent.eventID = eventCounter;
+        newEvent.eventName = _eventName;
+        newEvent.registrationFee = _registrationFee;
+        newEvent.maxPPL = _maxPPL;
+        newEvent.state = State.NotStarted;
+&nbsp;
+        return eventCounter;
+    }
+&nbsp;
+   function openRegistration(uint256 _eventID, uint256 _registrationDeadline) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyCreator {
+    Event storage eventDetails = events[_eventID];
+    
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (eventDetails.state != State.NotStarted) {
+        revert EventAlreadyOpenOrFinished(_eventID, eventDetails.state);
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (_registrationDeadline &lt;= block.timestamp) {
+        revert InvalidRegistrationDeadline(_registrationDeadline, block.timestamp);
+    }
+&nbsp;
+    eventDetails.state = State.IsOpen;
+    eventDetails.currentPPL = 0;
+    eventDetails.registrationDeadline = _registrationDeadline;
+    }
+&nbsp;
+    function participantRegistration(uint256 _eventID, string calldata _name) public payable <span class="missing-if-branch" title="else path not taken" >E</span>noReentrancy {
+    Event storage eventDetails = events[_eventID];
+&nbsp;
+    if (eventDetails.state != State.IsOpen) {
+        revert EventNotOpen(_eventID, eventDetails.state);
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (eventDetails.currentPPL &gt;= eventDetails.maxPPL) {
+        revert EventFullyBooked(_eventID, eventDetails.maxPPL);
+    }
+    if (msg.value != eventDetails.registrationFee) {
+        revert IncorrectRegistrationFee(msg.value, eventDetails.registrationFee);
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (block.timestamp &gt; eventDetails.registrationDeadline) {
+        revert RegistrationDeadlinePassed(block.timestamp, eventDetails.registrationDeadline);
+    }
+&nbsp;
+    uint8 newParticipantCount = eventDetails.currentPPL + 1;
+    <span class="missing-if-branch" title="else path not taken" >E</span>require(newParticipantCount &gt; eventDetails.currentPPL, "Overflow occurred");  //  overflow check
+&nbsp;
+    eventDetails.participants[msg.sender] = _name;
+    eventDetails.participantAddress.push(msg.sender);
+&nbsp;
+    if (newParticipantCount == eventDetails.maxPPL || <span class="branch-1 cbranch-no" title="branch not covered" >block.timestamp &gt; eventDetails.registrationDeadline</span>) {
+        eventDetails.state = State.Finished;
+    }
+&nbsp;
+    eventDetails.currentPPL = newParticipantCount;
+}
+    
+    function closeRegistration (uint256 _eventID) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyCreator {
+        Event storage eventDetails = events[_eventID];
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (eventDetails.state != State.IsOpen) {
+        revert EventNotOpen(_eventID, eventDetails.state);
+    }       
+    eventDetails.state = State.Finished;
+&nbsp;
+    uint256 totalParticipants = eventDetails.currentPPL;
+    uint256 totalRevenue = totalParticipants * eventDetails.registrationFee;
+     emit EventSummary(_eventID, eventDetails.eventName, totalParticipants, totalRevenue); 
+    }
+           
+   function getParticipants(uint256 _eventID) public view returns (address[] memory, string[] memory) {
+        Event storage eventDetails = events[_eventID];
+        uint256 participantCount = eventDetails.participantAddress.length;
+        string[] memory names = new string[](participantCount);
+&nbsp;
+        for (uint256 i = 0; i &lt; participantCount; i++) {
+            address participantAddress = eventDetails.participantAddress[i];
+            names[i] = eventDetails.participants[participantAddress];
+        }
+&nbsp;
+        return (eventDetails.participantAddress, names);
+    }
+&nbsp;
+&nbsp;
+    receive() external payable {
+        emit EtherReceived(msg.sender, msg.value);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    fallback() external payable {</span>
+<span class="cstat-no" title="statement not covered" >        emit FallbackTriggered(msg.sender, msg.value, msg.data);</span>
+    }
+&nbsp;
+function withdrawPayments(uint256 amount) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyCreator {
+    <span class="missing-if-branch" title="else path not taken" >E</span>require(address(this).balance &gt;= amount, "Insufficient balance");
+&nbsp;
+    // Transfer the specified amount to the contract creator
+    (bool success, ) = creator.call{value: amount}("");
+    <span class="missing-if-branch" title="else path not taken" >E</span>require(success, "Transfer failed");
+}
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Sep 06 2024 23:48:24 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
