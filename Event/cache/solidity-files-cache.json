@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/mariiavaverova/Desktop/Event/contracts/Evenmang.sol": {
-      "lastModificationDate": 1725308097500,
-      "contentHash": "cac5ea1ab2e5ceec56751db66d6a0d88",
+    "/Users/mariiavaverova/Desktop/solidity/Event/contracts/Evenmang.sol": {
+      "lastModificationDate": 1725728399839,
+      "contentHash": "81af6f265ed57e56eacebaae2041cf7e",
       "sourceName": "contracts/Evenmang.sol",
       "solcConfig": {
         "version": "0.8.26",
@@ -26,9 +26,6 @@
                 "ast"
               ]
             }
-          },
-          "metadata": {
-            "useLiteralContent": false
           }
         }
       },

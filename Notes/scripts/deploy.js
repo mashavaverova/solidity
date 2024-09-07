@@ -4,16 +4,18 @@ async function main() {
   // Get the deployer account
   const [deployer] = await ethers.getSigners();
 
-  // Log the deployer address
+  // Log the deployer's address
   console.log("Deploying contracts with the account:", deployer.address);
 
-  // Deploy the Notes contract and wait for it to be mined
+  // Deploy the Notes contract
   const Notes = await ethers.getContractFactory("Notes");
-  const notes = await Notes.deploy(); // Deploy the contract
-  await notes.deployed(); // Ensure the contract is deployed and wait for the transaction to be mined
+  const notes = await Notes.deploy();
+
+  // Wait for the contract deployment to complete
+  await notes.waitForDeployment();
 
   // Log the address of the deployed contract
-  console.log("Notes contract deployed to:", notes.address);
+  console.log("Notes contract deployed to:", await notes.getAddress());
 }
 
 main()

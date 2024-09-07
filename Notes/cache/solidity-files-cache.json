@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/mariiavaverova/Desktop/Notes/contracts/Notes.sol": {
-      "lastModificationDate": 1725653989188,
-      "contentHash": "9ecee00c68f1af118df5eb6295386f79",
+    "/Users/mariiavaverova/Desktop/solidity/Notes/contracts/Notes.sol": {
+      "lastModificationDate": 1725728485637,
+      "contentHash": "cc53b0edd5236ab4d7eb9005b1222dad",
       "sourceName": "contracts/Notes.sol",
       "solcConfig": {
         "version": "0.8.26",
@@ -26,9 +26,6 @@
                 "ast"
               ]
             }
-          },
-          "metadata": {
-            "useLiteralContent": false
           }
         }
       },

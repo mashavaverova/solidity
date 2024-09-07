@@ -1,21 +1,19 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  // Get the deployer account
-  const [deployer] = await ethers.getSigners();
+  // Get the contract factory for "Evenmang"
+  const Evenmang = await ethers.getContractFactory("Evenmang");
 
-  // Log the deployer address
-  console.log("Deploying contracts with the account:", deployer.address);
+  console.log("Deploying the contract...");
 
-  // Deploy the Evenmang contract
-  const Evenmang = await ethers.getContractFactory("Evenmang"); // Fetch contract factory
-  const evenmang = await Evenmang.deploy(); // Deploy contract and wait for it to be mined
+  // Deploy the contract (Evenmang constructor takes no arguments)
+  const evenmang = await Evenmang.deploy();
 
-  // Wait until the contract is fully deployed and mined
-  await evenmang.deployTransaction.wait();
+  // Wait for the deployment to be mined
+  await evenmang.waitForDeployment();
 
-  // Log the deployed contract address
-  console.log("Evenmang contract deployed to:", evenmang.address);
+  // Log the deployed contract's address
+  console.log("Contract deployed to address:", await evenmang.getAddress());
 }
 
 main()

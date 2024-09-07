@@ -1,16 +1,19 @@
-async function main() {
-  const FilmVoting = await ethers.getContractFactory("FilmVoting");
+const { ethers } = require("hardhat");
 
-  const movies = ["Movie 1", "Movie 2", "Movie 3"];
-  const votingDuration = 3600; // 1 hour
+async function main() {
+  // Get the contract factory for "FilmVoting"
+  const FilmVoting = await ethers.getContractFactory("FilmVoting");
 
   console.log("Deploying the contract...");
 
-  const filmVoting = await FilmVoting.deploy(movies, votingDuration);
+  // Deploy the contract without any arguments since the constructor does not take any
+  const filmVoting = await FilmVoting.deploy();
 
-  await filmVoting.deployed();
+  // Wait for the deployment to be mined
+  await filmVoting.waitForDeployment();
 
-  console.log("Contract deployed to address:", filmVoting.address);
+  // Log the deployed contract's address
+  console.log("Contract deployed to address:", await filmVoting.getAddress());
 }
 
 main()
