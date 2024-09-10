@@ -1,0 +1,39 @@
+.wallet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: #FFFFFF; /* White background for contrast */
+  padding: 20px;
+  border-radius: 15px;
+  border: 5px solid #ffcc00; /* Bright Yellow border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+  font-family: 'Press Start 2P', cursive; /* Mario Font */
+}
+
+.wallet-container p {
+  font-size: 18px;
+  color: #228B22; /* Green for connected status like Mario's pipes */
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #000000; /* Dark shadow for depth */
+}
+
+button {
+  padding: 12px 30px;
+  background-color: #ff4500; /* Mario Red */
+  color: white;
+  border: 3px solid #228B22; /* Green border */
+  border-radius: 50px; /* Round edges */
+  font-size: 14px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 6px 0px #333; /* Strong shadow for a fun 3D effect */
+}
+
+button:hover {
+  background-color: #32CD32; /* Bright Green on hover */
+  transform: translateY(-3px); /* Bouncing effect */
+  box-shadow: 0px 3px 0px #333;
+}
